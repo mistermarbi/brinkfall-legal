@@ -138,3 +138,58 @@ footer a { color: var(--ink-soft); }
   .wordmark { font-size: 27px; }
   main { padding: 32px 20px 56px; }
 }
+
+/* ── Company homepage ─────────────────────────────────────────── */
+
+.lede {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* A product is an icon beside a block of text, stacking on narrow
+   screens. The icons are square app icons, so they are given a fixed
+   size rather than a percentage — an app icon scaled to the column
+   reads as a picture rather than as a badge. */
+.product {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 22px;
+  margin: 0 0 20px;
+}
+
+.badge {
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+  border-radius: 18px;
+}
+
+.product-body { min-width: 0; }
+.product-body h3 { margin-top: 0; }
+.product-body p:last-child { margin-bottom: 0; }
+
+.tag {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 8px 0 32px;
+  border: 1px solid var(--rule);
+}
+
+@media (max-width: 520px) {
+  .lede { font-size: 17px; }
+  .product { flex-direction: column; gap: 14px; }
+  .badge { width: 68px; height: 68px; flex-basis: auto; }
+}
